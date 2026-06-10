@@ -4,13 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Tiffany's front-end developer portfolio" />
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet" />
         <title>Tiffany's Portfolio Page</title>
     </head>
     <body>
         <header>
             <h1>Tiffany</h1>
-            <h2>Designer, Developer, Dreamer</h2>
+            <h2 class="h2-header">Designer, Developer, Dreamer</h2>
         </header>
         <nav id="main-nav">
             <a href="#about">About</a>
@@ -20,98 +21,130 @@
         </nav>
         <section id="about">
             <h2>About Me...</h2>
-            <p>
-                Hi, I’m Tiffany, a front-end developer and former cake decorator. After 11 years in the culinary arts industry, I found that many of
-                the skills I used every day, like creativity, attention to detail, planning, collaboration, and problem solving, also apply to
-                software development. My interest in web development started with HTML and CSS in high school and grew through personal projects using
-                HTML, CSS, and JavaScript. I later completed a Full Stack coding bootcamp and have continued building my skills through Udemy courses
-                and personal projects.
-            </p>
-            <p>
-                I’m currently enrolled in LaunchCode and looking for a web development role where I can contribute to meaningful projects, collaborate
-                with other developers, and continue growing as a programmer :)
-            </p>
+            <div class="about-me-img-container">
+                <img src="images/profile-pic.png" class="about-me-img" width="500px" alt="Girl sitting at laptop working." />
+            </div>
+            <div class="about-me-paragraph">
+                <p>
+                    Hi, I’m Tiffany, a front-end developer and former cake decorator. After 11 years in the culinary arts industry, I found that many
+                    of the skills I used every day, like creativity, attention to detail, planning, collaboration, and problem solving, also apply to
+                    software development. My interest in web development started with HTML and CSS in high school and grew through personal projects
+                    using HTML, CSS, and JavaScript. I later completed a Full Stack coding bootcamp and have continued building my skills through
+                    Udemy courses and personal projects.
+                </p>
+                <p>
+                    I’m currently enrolled in LaunchCode and looking for a web development role where I can contribute to meaningful projects,
+                    collaborate with other developers, and continue growing as a programmer :)
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+            </div>
         </section>
         <section id="background">
             <div id="education">
                 <h2>Education</h2>
                 <div class="education-block">
-                    <img src="images/rswhc.jpg" width="100px" alt="Walnut Hill College Logo" />
-                    <h3>Walnut Hill College</h3>
-                    <h4>Feb 2009 - July 2010</h4>
-                    <p>
-                        <strong>Overview:</strong> 18 month program blending hands-on training in kitchens and school owned restaurants with
-                        interactive lessons in business planning and management. Received Associate of Science Degree in Pastry Arts and an award for
-                        Perfect Attendance.
-                    </p>
+                    <div class="education-img-container">
+                        <img src="images/rswhc.jpg" class="education-img" width="100px" alt="Walnut Hill College Logo" />
+                    </div>
+                    <div>
+                        <h3>Walnut Hill College</h3>
+                        <h4>Feb 2009 - July 2010</h4>
+                        <p>
+                            <strong>Overview:</strong> 18 month program blending hands-on training in kitchens and school owned restaurants with
+                            interactive lessons in business planning and management. Received Associate of Science Degree in Pastry Arts and an award
+                            for Perfect Attendance.
+                        </p>
+                    </div>
                 </div>
                 <div class="education-block">
-                    <img src="images/nucamp.png" width="100px" alt="NuCamp Coding Bootcamp Logo" />
-                    <h3>NuCamp Coding Bootcamp</h3>
-                    <h4>April - Nov 2020</h4>
-                    <p>
-                        <strong>Overview:</strong> Hybrid learning environment with individual course work during the week and coding workshops led by
-                        instructors on Saturday. Received certifications upon graduating Fundamentals and Full Stack Web and Mobile Development
-                        Programs.
-                    </p>
-                    <p><strong>Courses:</strong> HTML, CSS, JavaScript, Bootstrap, React, React Native and Node.js.</p>
+                    <div class="education-img-container">
+                        <img src="images/nucamp.png" class="education-img" width="100px" alt="NuCamp Coding Bootcamp Logo" />
+                    </div>
+                    <div>
+                        <h3>NuCamp Coding Bootcamp</h3>
+                        <h4>April - Nov 2020</h4>
+                        <p>
+                            <strong>Overview:</strong> Hybrid learning environment with individual course work during the week and coding workshops
+                            led by instructors on Saturday. Received certifications upon graduating Fundamentals and Full Stack Web and Mobile
+                            Development Programs.
+                        </p>
+                    </div>
                 </div>
                 <div class="education-block">
-                    <img src="images/launchcode.png" width="100px" alt="LaunchCode Logo" />
-                    <h3>LaunchCode</h3>
-                    <h4>May 2026 - Sept 2026</h4>
-                    <p>
-                        <strong>Overview:</strong> I am currently completing LaunchCode’s software development program, where I am strengthening my
-                        skills in HTML, CSS, JavaScript, Git, and collaborative development. Through hands-on exercises and projects, I am continuing
-                        to build my confidence with problem solving, testing, and creating interactive web applications.
-                    </p>
-                    <p><strong>Courses:</strong> HTML, CSS, JavaScript, React, React Native, Java, SQL.</p>
+                    <div class="education-img-container">
+                        <img src="images/launchcode.png" class="education-img" width="100px" alt="LaunchCode Logo" />
+                    </div>
+                    <div>
+                        <h3>LaunchCode</h3>
+                        <h4>May 2026 - Sept 2026</h4>
+                        <p>
+                            <strong>Overview:</strong> I am currently completing LaunchCode’s software development program, where I am strengthening
+                            my skills in HTML, CSS, JavaScript, Git, and collaborative development. Through hands-on exercises and projects, I am
+                            continuing to build my.
+                        </p>
+                    </div>
                 </div>
                 <div class="education-block">
-                    <img src="images/projects.jpg" width="100px" alt="cartoon panda on laptop" />
-                    <h3>Personal Projects</h3>
-                    <h4>Jan 2021 - Present</h4>
-                    <p><strong>Overview:</strong> Building projects is a great way to learn new things and keep my current skills sharp!</p>
-                    <p><strong>Courses:</strong> HTML, CSS, JavaScript, React, React Native, Java, SQL.</p>
+                    <div class="education-img-container">
+                        <img src="images/projects.jpg" class="education-img" width="100px" alt="cartoon panda on laptop" />
+                    </div>
+                    <div>
+                        <h3>Personal Projects</h3>
+                        <h4>Jan 2021 - Present</h4>
+                        <p>
+                            <strong>Overview:</strong> Building projects is a great way to learn new things and keep my current skills sharp! Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                            enim ad minim veniam, quis nostrud.
+                        </p>
+                    </div>
                 </div>
             </div>
             <div id="experience">
-                <h2>Experience</h2>
-                <table border="1">
-                    <tr>
-                        <th>Skill/Tool</th>
-                        <th>Category</th>
-                        <th>Proficiency</th>
-                    </tr>
-                    <tr>
-                        <td>HTML</td>
-                        <td>Frontend</td>
-                        <td>Pro</td>
-                    </tr>
-                    <tr>
-                        <td>CSS</td>
-                        <td>Frontend</td>
-                        <td>Pro</td>
-                    </tr>
-                    <tr>
-                        <td>Git</td>
-                        <td>Version Control</td>
-                        <td>Beginner</td>
-                    </tr>
-                    <tr>
-                        <td>Debugging</td>
-                        <td>Problem Solving</td>
-                        <td>Practicing</td>
-                    </tr>
-                </table>
+                <div class="experience-container">
+                    <h2>Experience</h2>
+                    <table class="experience-table">
+                        <tr>
+                            <th>Skill/Tool</th>
+                            <th>Category</th>
+                            <th>Proficiency</th>
+                        </tr>
+                        <tr>
+                            <td>Git</td>
+                            <td>Version Control</td>
+                            <td>Beginner</td>
+                        </tr>
+                        <tr>
+                            <td>Debugging</td>
+                            <td>Problem Solving</td>
+                            <td>Practicing</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="experience-container">
+                    <h2>Non Technical Skills</h2>
+                    <ul>
+                        <li>arts and crafts master :)</li>
+                        <li>houseplant hoarder</li>
+                        <li>plushie collector</li>
+                        <li>professional organizer</li>
+                        <li>eater of all the popcorn</li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section id="portfolio-projects">
             <h2>Portfolio Projects</h2>
             <div class="project">
-                <h3>Shiba Flip Memory Card Game</h3>
-                <img src="images/memory_card_game.png" alt="Memory Flip Card Game Screenshot" width="400px" />
-                <p><strong>Overview:</strong> Flip the cards two at a time until you find all the matching Shibas!</p>
+                <h3 class="project-title">Shiba Flip Memory Card Game</h3>
+                <img src="images/memory_card_game.png" class="project-img" alt="Memory Flip Card Game Screenshot" width="400px" />
+                <p>
+                    <strong>Overview:</strong> Flip the cards two at a time until you find all the matching Shibas! Try to do it as fast as possible
+                    and beat your last record time!
+                </p>
                 <div class="project-links">
                     <a href="github.com" target="_blank">
                         <button>Github Repo</button>
@@ -122,8 +155,8 @@
                 </div>
             </div>
             <div class="project">
-                <h3>Rock Paper Scissors Game</h3>
-                <img src="images/rockpaperscissors.png" alt="Rock Paper Scissors Game Screenshot" width="400px" />
+                <h3 class="project-title">Rock Paper Scissors Game</h3>
+                <img src="images/rockpaperscissors.png" class="project-img" alt="Rock Paper Scissors Game Screenshot" width="400px" />
                 <p>
                     <strong>Overview:</strong> An interactive Rock Paper Scissors game where users play against the computer and see the result of
                     each round.
@@ -138,11 +171,11 @@
                 </div>
             </div>
             <div class="project">
-                <h3>Battleship</h3>
-                <img src="images/battleship.png" alt="Battleship Game ScreenShot" width="400px" />
+                <h3 class="project-title">Battleship</h3>
+                <img src="images/battleship.png" class="project-img" alt="Battleship Game ScreenShot" width="400px" />
                 <p>
-                    <strong>Overview:</strong> A JavaScript Battleship game that lets users select grid coordinates, track hits and misses, and play
-                    against hidden computer-placed ships.
+                    <strong>Overview:</strong> A Battleship game that lets users select coordinates, track hits and misses, and play against
+                    computer-placed ships.
                 </p>
                 <div class="project-links">
                     <a href="github.com" target="_blank">
@@ -154,8 +187,8 @@
                 </div>
             </div>
             <div class="project">
-                <h3>Fortune Cookie Generator</h3>
-                <img src="images/fortune_cookie.png" alt="Fortune Cookie Generator Game Screenshot" width="400px" />
+                <h3 class="project-title">Fortune Cookie Generator</h3>
+                <img src="images/fortune_cookie.png" class="project-img" alt="Fortune Cookie Generator Game Screenshot" width="400px" />
                 <p><strong>Overview:</strong> No need to wait until you eat Chinese to get a fortune. Crack open a virtual fortune cookie!</p>
                 <div class="project-links">
                     <a href="github.com" target="_blank">
@@ -167,8 +200,8 @@
                 </div>
             </div>
             <div class="project">
-                <h3>Recipe Finder</h3>
-                <img src="images/recipe_finder.png" alt="Recipe Finder Project Screenshot" width="400px" />
+                <h3 class="project-title">Recipe Finder</h3>
+                <img src="images/recipe_finder.png" class="project-img" alt="Recipe Finder Project Screenshot" width="400px" />
                 <p><strong>Overview:</strong> Search for a recipe by entering the main ingredient or clicking the smiley button for a random one.</p>
                 <div class="project-links">
                     <a href="github.com" target="_blank">
@@ -180,12 +213,9 @@
                 </div>
             </div>
             <div class="project">
-                <h3>Calculator</h3>
-                <img src="images/calculator.png" alt="Calculator Project Screenshot" width="400px" />
-                <p>
-                    <strong>Overview:</strong> A JavaScript calculator that handles basic math operations, updates the display dynamically, and
-                    provides a simple interactive user experience.
-                </p>
+                <h3 class="project-title">Calculator</h3>
+                <img src="images/calculator.png" class="project-img" alt="Calculator Project Screenshot" width="400px" />
+                <p><strong>Overview:</strong> A JavaScript calculator that handles basic math operations, updates the display dynamically.</p>
                 <div class="project-links">
                     <a href="github.com" target="_blank">
                         <button>Github Repo</button>
@@ -198,33 +228,38 @@
         </section>
         <section id="contact">
             <h2>Let's Get In Touch!</h2>
-            <p>
-                Feel free to reach out and leave a message. I'll try to get back to you ASAP! I'm always open to suggestions or creative criticism
-                about my projects. I know there are a million different ways to do things and I love learning.
-            </p>
-            <form action="#" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" />
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" />
-                <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea>
-                <button type="submit">Submit</button>
-            </form>
+            <div class="contact-container">
+                <p>
+                    Feel free to reach out and leave a message. I'll try to get back to you ASAP! I'm always open to suggestions or creative criticism
+                    about my projects. I know there are a million different ways to do things and I love learning.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Neniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. eniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+            <div class="contact-container">
+                <form action="#" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="contact-input" placeholder="Name..." />
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="contact-input" placeholder="example@gmail.com" />
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" class="contact-input" placeholder="Type your message here..."></textarea>
+                    <button type="submit" class="button-submit">Submit</button>
+                </form>
+            </div>
         </section>
         <footer>
             <div class="footer-contact">
                 <h2>Contact</h2>
-                <a href="mailto:tiffany@gmail.com">Email: tiffany@gmail.com</a>
-                <a href="tel:+8675309">Phone: 8675-309</a>
-                <a href="sms:+8675309">Text: 8675-309</a>
-            </div>
-            <div class="footer-social">
-                <h2>Socials</h2>
-                <a href="https://github.com/...">Github</a>
-                <a href="https://facebook.com/...">Facebook</a>
-                <a href="https://twitter.com/...">Twitter</a>
-                <a href="https://linkedin.com/...">LinkedIn</a>
+                <div class="footer-container">
+                    <a href="mailto:tiffany@gmail.com" class="footer-link">Email: tiffany@gmail.com</a><br />
+                    <a href="tel:+8675309" class="footer-link">Phone: 8675-309</a><br />
+                    <a href="sms:+8675309" class="footer-link">Text: 8675-309</a>
+                </div>
             </div>
             <p class="footer-copy">© 2026 Tiffany</p>
         </footer>

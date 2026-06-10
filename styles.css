@@ -1,0 +1,272 @@
+/* * {
+    outline: 1px solid red;
+} */
+/* for visual purposes, comment out when not coding */
+
+/* General ------------------------------------------------------------------------------------------------ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    background: linear-gradient(to right, #ef9393, #e17dc2, #998ee0, #43add0, #8bdeda);
+} /* Got this code from uigradients :)*/
+
+a {
+    text-decoration: none;
+}
+
+section {
+    background-color: #ffffffcf;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+p {
+    padding: 20px;
+}
+
+/* header ------------------------------------------------------------------------------------------------ */
+header {
+    text-align: center;
+}
+
+h1 {
+    font-family: "Rock Salt", cursive;
+    font-size: 4em;
+}
+
+h2 {
+    text-align: center;
+}
+
+h1,
+h2.h2-header {
+    display: inline-block;
+    text-align: center;
+}
+
+.about-me-img {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/* Nav Bar ------------------------------------------------------------------------------------------------ */
+nav {
+    background-color: #998ee0;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+} /* z-index puts the nav bar on top of everything, higher the number closer to the front*/
+
+nav a {
+    color: black;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* About Me Section ------------------------------------------------------------------------------------------------ */
+.about-me-img-container {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding: 20px 50px;
+} /* display: inline-block — puts block elements side by side
+vertical-align: top — aligns them to the top so they start at the same point */
+
+.about-me-paragraph {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+}
+
+/* Education Section ------------------------------------------------------------------------------------------------ */
+#education {
+    text-align: center;
+}
+
+.education-block {
+    background-color: white;
+    display: inline-block;
+    min-height: 200px;
+    margin: 20px 10px;
+    padding: 10px;
+    width: 45%;
+    vertical-align: top;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.education-img-container {
+    float: left;
+    width: 120px;
+    margin-right: 15px;
+    padding: 50px 0;
+    text-align: center;
+} /* float makes that element move to the left side, and lets the content after it wrap around it. */
+
+.education-img {
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+/* Experience Section ------------------------------------------------------------------------------------------------------- */
+#experience {
+    text-align: center;
+}
+
+.experience-container {
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    margin: 20px 20px;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+.experience-container ul {
+    display: inline-block;
+    text-align: left;
+}
+
+.experience-container h2 {
+    margin-bottom: 10px;
+}
+
+.experience-table {
+    margin: 0 auto;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+table {
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: center;
+}
+
+/* Portfolio Project Section ------------------------------------------------------------------------------------------------ */
+#portfolio-projects {
+    text-align: center;
+}
+
+/* since they're inline-block they behave like text and respond to text-align on the parent */
+.project {
+    background-color: white;
+    display: inline-block;
+    margin: 20px 30px;
+    padding: 10px;
+    width: 40%;
+    vertical-align: top;
+    border-radius: 5px;
+}
+
+.project-title {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.project-img {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.project-links {
+    text-align: center;
+}
+
+button {
+    background-color: #998ee0;
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 15px 10px 15px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #43add0;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Portfolio Project Section ------------------------------------------------------------------------------------------------ */
+#contact {
+    text-align: center;
+}
+
+.contact-container {
+    background-color: white;
+    margin: 20px;
+    padding: 10px 20px;
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.contact-input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    padding-top: 10px;
+}
+
+textarea {
+    width: 70%;
+    height: 100px;
+}
+
+.button-submit {
+    margin-top: 10px;
+}
+
+/* Footer -----------------------------------------------------------------------------------------------------------------------*/
+footer {
+    text-align: center;
+}
+
+.footer-container {
+    margin-top: 20px;
+}
+
+.footer-link {
+    font-weight: bold;
+    display: block;
+    color: black;
+}
+
+.footer-link:hover {
+    color: white;
+}
