@@ -1,7 +1,16 @@
 /* * {
     outline: 1px solid red;
 } */
-/* for visual purposes, comment out when not coding */
+
+/* Use above to visualize where everything is at once - adds red outline to all elements including padding. */
+
+/* Color Variables for Consistancy */
+:root {
+    --pink: #e17dc2;
+    --purple: #998ee0;
+    --blue: #43add0;
+    --light-blue: #8bdeda;
+}
 
 /* General ------------------------------------------------------------------------------------------------ */
 * {
@@ -10,28 +19,73 @@
     padding: 0;
 }
 
+html {
+    height: 100%; /* need this for form submitted page, the centering code colapses the background*/
+}
+
 body {
     font-family: "Times New Roman", Times, serif;
-    background: linear-gradient(to right, #ef9393, #e17dc2, #998ee0, #43add0, #8bdeda);
-} /* Got this code from uigradients :)*/
+    background: linear-gradient(to right, #ef9393, var(--pink), var(--purple), var(--blue), var(--light-blue));
+}
 
 a {
     text-decoration: none;
 }
 
+h2 {
+    text-align: center;
+}
+
 section {
-    background-color: #ffffffcf;
+    background-color: #ffffffc2;
     max-width: 1200px;
     margin: 30px auto;
-    padding: 20px 0;
+    padding-top: 20px;
     border-radius: 5px;
+    scroll-margin-top: 75px; /* About size of nav bar, so it doesn't cover part of the section when you click a link */
 }
 
 p {
-    padding: 20px;
+    padding: 20px 20px 0 20px;
 }
 
-/* header ------------------------------------------------------------------------------------------------ */
+/* Shared Container Styles ------------------------------------------------------------------------------------------------ */
+.about-me-paragraph,
+.education-block,
+.experience-container,
+.project,
+.contact-container {
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Shared Image Styles */
+.about-me-img,
+.project-img {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/* Scrollbar Chrome, Edge, Safari. Sorry FireFox another day I'll add code for you ------------------------------------ */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--pink);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--blue);
+}
+
+/* Header ------------------------------------------------------------------------------------------------ */
 header {
     text-align: center;
 }
@@ -39,37 +93,25 @@ header {
 h1 {
     font-family: "Rock Salt", cursive;
     font-size: 4em;
-}
-
-h2 {
     text-align: center;
-}
-
-h1,
-h2.h2-header {
-    display: inline-block;
-    text-align: center;
-}
-
-.about-me-img {
-    border: 2px solid black;
-    border-radius: 5px;
 }
 
 /* Nav Bar ------------------------------------------------------------------------------------------------ */
 nav {
-    background-color: #998ee0;
-    padding: 15px;
+    background-color: var(--purple);
+    text-align: center;
     position: sticky;
     top: 0;
-    z-index: 1000;
-} /* z-index puts the nav bar on top of everything, higher the number closer to the front*/
+    z-index: 1000; /* puts the nav bar on top of everything, higher the number closer to the front */
+    padding: 15px;
+    border: 1px solid black;
+}
 
 nav a {
     color: black;
     font-size: 1.25em;
     font-weight: bold;
-    margin-right: 20px;
+    padding: 0 20px;
 }
 
 nav a:hover {
@@ -78,17 +120,51 @@ nav a:hover {
 
 /* About Me Section ------------------------------------------------------------------------------------------------ */
 .about-me-img-container {
-    display: inline-block;
-    vertical-align: top;
+    display: inline-block; /* puts block elements side by side */
+    vertical-align: top; /* aligns them to the top so they start at the same point */
     width: 50%;
     padding: 20px 50px;
-} /* display: inline-block — puts block elements side by side
-vertical-align: top — aligns them to the top so they start at the same point */
+}
 
 .about-me-paragraph {
     display: inline-block;
     vertical-align: top;
     width: 45%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Tag Line Typewritinger ------------------------------------------------------------------------------------------- */
+.typewriter-container {
+    padding: 10px 0 0 17px;
+}
+
+#typed {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    display: inline;
+    font-size: 2.5em;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1.5em;
+    background: currentColor; /* inherited text color*/
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    animation: blink 0.7s steps(1) infinite; /* runs blink animation, steps makes it turn on/off like a real cursor*/
+}
+
+@keyframes blink {
+    /* worked without this so there must be a defualt blink in the browser*/
+    0% {
+        opacity: 1; /* fully visible half the time */
+    }
+    50% {
+        opacity: 0; /* invisible */
+    }
 }
 
 /* Education Section ------------------------------------------------------------------------------------------------ */
@@ -97,28 +173,27 @@ vertical-align: top — aligns them to the top so they start at the same point *
 }
 
 .education-block {
-    background-color: white;
-    display: inline-block;
-    min-height: 200px;
-    margin: 20px 10px;
-    padding: 10px;
-    width: 45%;
+    display: inline-block; /* making elements inline-block makes text-align in parent treat them like text and can center */
     vertical-align: top;
+    width: 45%;
     text-align: left;
-    border-radius: 5px;
+    margin: 15px 15px 0 15px;
+    padding: 20px;
+    min-height: 10px;
 }
 
 .education-img-container {
-    float: left;
+    float: left; /* float makes that element move to the left side, and lets the content after it wrap around it */
     width: 120px;
-    margin-right: 15px;
-    padding: 50px 0;
     text-align: center;
-} /* float makes that element move to the left side, and lets the content after it wrap around it. */
+    padding: 30px 0 20px 0;
+    margin-right: 15px;
+}
 
 .education-img {
     border: 2px solid black;
     border-radius: 50%;
+    padding: 10px;
 }
 
 /* Experience Section ------------------------------------------------------------------------------------------------------- */
@@ -127,18 +202,12 @@ vertical-align: top — aligns them to the top so they start at the same point *
 }
 
 .experience-container {
-    background-color: white;
     display: inline-block;
     vertical-align: top;
+    text-align: center;
     width: 45%;
-    margin: 20px 20px;
+    margin: 20px 15px;
     padding: 20px 0;
-    border-radius: 5px;
-}
-
-.experience-container ul {
-    display: inline-block;
-    text-align: left;
 }
 
 .experience-container h2 {
@@ -152,17 +221,29 @@ vertical-align: top — aligns them to the top so they start at the same point *
 table,
 th,
 td {
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 10px;
 }
 
 table {
+    width: 90%;
     text-align: left;
     border-collapse: collapse;
 }
 
 th {
+    background-color: var(--light-blue);
     text-align: center;
+}
+
+ul {
+    display: inline-block;
+    text-align: left;
+    padding-left: 25px;
+}
+
+li {
+    line-height: 1.6em;
 }
 
 /* Portfolio Project Section ------------------------------------------------------------------------------------------------ */
@@ -172,13 +253,15 @@ th {
 
 /* since they're inline-block they behave like text and respond to text-align on the parent */
 .project {
-    background-color: white;
     display: inline-block;
+    vertical-align: top;
+    width: 42%;
     margin: 20px 30px;
     padding: 10px;
-    width: 40%;
-    vertical-align: top;
-    border-radius: 5px;
+}
+
+.project p {
+    padding-bottom: 20px;
 }
 
 .project-title {
@@ -189,8 +272,10 @@ th {
 .project-img {
     display: block;
     margin: 0 auto;
-    border: 2px solid black;
-    border-radius: 5px;
+}
+
+.project-overview {
+    text-align: left;
 }
 
 .project-links {
@@ -198,63 +283,95 @@ th {
 }
 
 button {
-    background-color: #998ee0;
+    background-color: var(--purple);
     color: black;
     font-size: 1em;
     font-weight: bold;
-    margin: 0 15px 10px 15px;
-    padding: 10px 20px;
     border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
+    margin: 0 15px 10px 15px;
+    padding: 10px 20px;
 }
 
 button:hover {
-    background-color: #43add0;
+    background-color: var(--blue);
 }
 
 button:active {
     transform: scale(0.95);
 }
 
-/* Portfolio Project Section ------------------------------------------------------------------------------------------------ */
+/* Contact Section ------------------------------------------------------------------------------------------------ */
 #contact {
     text-align: center;
 }
 
 .contact-container {
-    background-color: white;
-    margin: 20px;
-    padding: 10px 20px;
-    width: 45%;
     display: inline-block;
     vertical-align: top;
+    width: 45%;
+    margin: 20px;
+    padding: 20px;
+}
+
+.contact-paragraph {
+    text-align: left;
 }
 
 .contact-input {
     display: block;
     width: 100%;
-    padding: 5px;
+    padding: 10px;
 }
 
 form label {
     display: block;
+    font-weight: bold;
     text-align: left;
-    padding-top: 10px;
+    padding: 10px 0 5px 0;
 }
 
 textarea {
-    width: 70%;
-    height: 100px;
+    height: 50px;
 }
 
-.button-submit {
-    margin-top: 10px;
+.submit-btn {
+    margin-top: 20px;
+}
+
+input,
+textarea {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* Form Submitted Section ------------------------------------------------------------------------------------------------------- */
+#form-submitted-container {
+    text-align: center;
+    width: fit-content; /* shrinks to the content */
+    margin: 0 auto; /* centers horizontally */
+    position: absolute; /* lets you use top/left */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* offsets by half its own size */
+}
+
+.back-btn {
+    background-color: var(--pink);
+}
+
+#form-message {
+    font-size: 1.5em;
+    margin-top: 20px;
 }
 
 /* Footer -----------------------------------------------------------------------------------------------------------------------*/
 footer {
+    background-color: var(--purple);
     text-align: center;
+    padding: 20px 0;
+    border: 1px solid black;
 }
 
 .footer-container {
@@ -262,11 +379,13 @@ footer {
 }
 
 .footer-link {
-    font-weight: bold;
-    display: block;
+    font-size: 1.25em;
     color: black;
+    font-weight: bold;
+    padding: 0 10px;
 }
 
 .footer-link:hover {
     color: white;
+    text-decoration: underline;
 }
